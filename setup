@@ -1,3 +1,4 @@
+#!/bin/bash
 LINUX_FLAG=""
 arch=$(uname)
 if [ $arch != "Linux" ]

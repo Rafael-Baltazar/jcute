@@ -1,0 +1,15 @@
+src='../bfp/lp_MDO.c ../commonlib.c ../myblas.c ../colamd/colamd.c ../fortify.c ../lp_rlp.c ../lp_crash.c ../bfp/bfp_etaPFI/lp_etaPFI.c ../lp_Hash.c ../lp_lib.c ../lp_wlp.c ../lp_matrix.c ../lp_mipbb.c ../lp_MPS.c ../lp_presolve.c ../lp_price.c ../lp_pricePSE.c ../lp_report.c ../lp_scale.c ../lp_simplex.c demo.c ../lp_SOS.c ../lp_utils.c ../yacc_read.c'
+c=cc
+
+math=-lm
+
+def=
+if [ "$PLATFORM" = "SCO_UNIX" ]
+then def='-dy -K PIC -DNOLONGLONG'
+     dl=-lc
+else dl=-ldl
+fi
+
+opts='-O3'
+
+$c -I.. -I../bfp -I../bfp/bfp_etaPFI -I../colamd $opts $def -DYY_NEVER_INTERACTIVE -DPARSER_LP $src -o demo $math $dl

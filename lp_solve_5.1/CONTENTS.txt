@@ -1,0 +1,49 @@
+What is in this folder:
+
+README.txt: Some general information about this version and a change history
+
+changes5.htm: A list of changes to the lpsolve API compared to version 4
+
+citations.txt: lpsolve citation data
+
+lp_solve51.chm: Windows HTML Help documentation file of this lpsolve version.
+
+lp_solve_5.1.tar.gz: lp_solve version 5.1 Linux (SuSE, Red Hat) executables. Contains the lp_solve stand-alone program and the bfp and xli libraries for Linux.
+
+lp_solve_5.1_COM.zip: lpsolve COM object for Windows. A COM interface to the lpsolve API.
+
+lp_solve_5.1_Delphi.zip: Delphi module with example. A starting point if you want to use the lpsolve API from Delphi/Pascal.
+
+lp_solve_5.1_IDE.zip: LpSolve IDE for Windows. A user friendly interface to lpsolve to formulate your model. At this moment only available for Windows.
+
+lp_solve_5.1_bfp_LUSOL_source.tar.gz: bfp LUSOL source. Can be compiled under Windows or Linux to generate the LUSOL bfp.
+
+lp_solve_5.1_bfp_etaPFI_source.tar.gz: bfp etaPFI source. Can be compiled under Windows or Linux to generate the etaPFI 2.0 bfp.
+
+lp_solve_5.1_c.zip: C example. A starting point if you want to use the lpsolve API from C.
+
+lp_solve_5.1_cs.net.zip: C# example (Windows). A starting point if you want to use the lpsolve API from C# (.NET).
+
+lp_solve_5.1_dev.tar.gz: lpsolve version 5.1 Linux (SuSE, Red Hat) libraries. Precompiled libraries if you want to call the lpsolve API from your application.
+
+lp_solve_5.1_dev.zip: lpsolve version 5.1 Windows dll, libraries and include files. The dll is needed by many of the examples (VB, C, C#, VB, VB.NET, Delphi, Java, ...) and the libraries and include files are needed when you statically link the lpsolve library with your application.
+
+lp_solve_5.1_doc.tar.gz: HTML documentation of this lpsolve version. For use under Unix/Linux. Can also be used under Windows, however lp_solve51.chm is more handy under that platform.
+
+lp_solve_5.1_excel.zip: Windows EXCEL example. A starting point if you want to use the lpsolve API from EXCEL.
+
+lp_solve_5.1_exe.zip: lp_solve version 5.1 Windows executables. Contains the lp_solve stand-alone program and the bfp and xli libraries for Windows.
+
+lp_solve_5.1_source.tar.gz: lpsolve version 5.1 source code for all platforms.
+
+lp_solve_5.1_vb.net.zip: VB.NET example (Windows). A starting point if you want to use the lpsolve API from VB.NET).
+
+lp_solve_5.1_vb.zip: VB6 example (Windows). A starting point if you want to use the lpsolve API from VB6.
+
+lp_solve_5.1_xli_CPLEX_source.tar.gz: xli CPLEX source. Can be compiled under Windows or Linux to generate the CPLEX xli interface.
+
+lp_solve_5.1_xli_LINDO_source.tar.gz: xli LINDO source. Can be compiled under Windows or Linux to generate the LINDO xli interface.
+
+lp_solve_5.1_xli_LPFML_source.tar.gz: xli LPFML (XML) source. Can be compiled under Windows to generate the XML xli interface.
+
+lp_solve_5.1_xli_MathProg_source.tar.gz: xli MathProg source. Can be compiled under Windows or Linux to generate the MathProg xli interface. Note that you also need GLPK source to do this.

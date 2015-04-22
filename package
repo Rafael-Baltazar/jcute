@@ -1,4 +1,6 @@
+#!/bin/bash
 export CUTE=jcute
+dos2unix package_application
 sh ./package_application
 mkdir tmp
 mkdir tmp/$CUTE
@@ -29,8 +31,8 @@ cp LICENSE* tmp/$CUTE/
 cp jcute.jar tmp/$CUTE/
 cp 3rdparty/lpsolve51.dll tmp/$CUTE/
 cp 3rdparty/lpsolve51j.dll tmp/$CUTE/
-cp 3rdparty/liblpsolve51.so tmp/$CUTE/
-cp 3rdparty/liblpsolve51j.so tmp/$CUTE/
+cp liblpsolve51.so tmp/$CUTE/
+cp liblpsolve51j.so tmp/$CUTE/
 cp JCuteGuiExecLog2.java tmp/$CUTE/
 cp JCuteGuiExecLog1.java tmp/$CUTE/
 cp replay1 tmp/$CUTE/

@@ -117,6 +117,8 @@ Building
 
 Instead of downloading the binary distribution archive, the archive
 can also be built from the sources in this repository.
+If you have Vagrant installed, you can build jCUTE with just 'vagrant up'.
+Then, to check whether jCUTE was built correctly, run 'vagrant ssh; cd /vagrant; ./runtests'.
 
 ### Compiling the Constraint Solving Library on Linux
 
@@ -170,6 +172,12 @@ systems.
 
 Execute the `package` shell script in the project's root directory to
 build the jCUTE JAR file and the distribution archive: `sh package`.
+
+
+Erros/Bugs
+----------
+
+If you find any bugs, please create an issue in this or osl's github repository.
 
 
 License

@@ -1,0 +1,1 @@
+java -cp .;..\lib\lpsolve51j.jar Demo

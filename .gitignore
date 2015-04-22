@@ -4,9 +4,20 @@
 *.iws
 out/
 
-#vagrant
+#Vagrant
 .vagrant/
 
-#java
-*.class
+#jCUTE
+jcute
+jcutec
+jcuteonce
+others.jar
+jcute.jar
+jcute.tar.gz
 
+#lp_solve
+liblpsolve51.so
+liblpsolve51j.so
+
+#Java
+*.class
