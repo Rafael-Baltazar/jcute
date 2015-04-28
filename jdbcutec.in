@@ -1,4 +1,3 @@
-
 export JAVA_LIB_PATH=.
 export LD_LIBRARY_PATH=.
 export PATH=$PATH:.
@@ -15,7 +14,7 @@ rm -rf tmpjcute
 mkdir tmpjcute
 mkdir tmpjcute/classes
 
-echo "javac -classpath $CLASSPATH -d tmpjcute/classes -sourcepath $1 $2"
+echo "javac -classpath $CLASSPATH -d tmpjcute -sourcepath $1 $2"
 javac -classpath $CLASSPATH -d tmpjcute/classes -sourcepath $1 $2
 
 if [ $4 != "-sequential" ]
@@ -25,7 +24,7 @@ else
     SEQUENTIAL=-Dcute.sequential=true
 fi
 
-echo "java -classpath $CLASSPATH $SEQUENTIAL cute.instrument.CuteInstrumenter -keep-line-number -d ./tmpjcute/classes -x cute  -x lpsolve --app $3"
-java -classpath $CLASSPATH $SEQUENTIAL cute.instrument.CuteInstrumenter -keep-line-number -d ./tmpjcute/classes -x cute  -x lpsolve --app $3
+echo "jdb -sourcepath $1 -classpath $CLASSPATH $SEQUENTIAL cute.instrument.CuteInstrumenter -keep-line-number -d ./tmpjcute/classes -x cute  -x lpsolve --app $3"
+jdb -sourcepath $1 -classpath $CLASSPATH $SEQUENTIAL cute.instrument.CuteInstrumenter -keep-line-number -d ./tmpjcute/classes -x cute  -x lpsolve --app $3
 
 mv cuteSymbolTable tmpjcute

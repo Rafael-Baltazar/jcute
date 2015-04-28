@@ -11,9 +11,11 @@ out/
 jcute
 jcutec
 jcuteonce
+jdbcutec
 others.jar
 jcute.jar
 jcute.tar.gz
+tmpjcute/
 
 #lp_solve
 liblpsolve51.so

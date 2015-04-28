@@ -1,9 +1,10 @@
 #!/bin/bash
-LINUX_FLAG=""
 arch=$(uname)
 if [ $arch != "Linux" ]
 then
-LINUX_FLAG=-B
+    LINUX_FLAG=-B
+else
+    LINUX_FLAG=""
 fi
 
 if which java;
@@ -31,6 +32,11 @@ echo -n "#!" > jcutec
 echo `which bash` >> jcutec
 cat $LINUX_FLAG jcutec.in >> jcutec
 chmod +x jcutec
+
+echo -n "#!" > jdbcutec
+echo `which bash` >> jdbcutec
+cat $LINUX_FLAG jdbcutec.in >> jdbcutec
+chmod +x jdbcutec
 
 echo -n "#!" > jcute
 echo `which bash` >> jcute

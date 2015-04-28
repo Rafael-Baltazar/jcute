@@ -1,7 +1,7 @@
 #!/bin/bash
 export CUTE=jcute
 dos2unix package_application
-sh ./package_application
+./package_application
 mkdir tmp
 mkdir tmp/$CUTE
 cp $CUTE.htm tmp/$CUTE/demo.htm

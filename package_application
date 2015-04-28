@@ -1,6 +1,7 @@
 #!/bin/bash
+export PATH=$PATH:/usr/lib/jvm/jdk1.7.0_65/bin
 dos2unix package_libraries
-sh ./package_libraries
+./package_libraries
 cp others.jar jcute.jar
 rm -rf classes/
 mkdir classes/
