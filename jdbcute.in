@@ -46,7 +46,7 @@ do
     echo "[Execution Path $i] java $JAVA_ARGS $SOURCE $arguments$MODE"
   fi
 
-  java $JAVA_ARGS -classpath $CLASSPATH -Djava.library.path=$JAVA_LIB_PATH -Dcute.args="$arguments$MODE" $SOURCE ;
+  jdb $JAVA_ARGS -classpath $CLASSPATH -Djava.library.path=$JAVA_LIB_PATH -Dcute.args="$arguments$MODE" $SOURCE ;
   ret="$?";
   ret2="$((ret&2))";
   echo "ret=$ret"
@@ -69,6 +69,6 @@ do
   JUNIT_FNAME=add
   JUNIT_RUNCOUNT=$i
   JUNIT_LAST_DIR=.
-  java $JAVA_ARGS -classpath $CLASSPATH cute.concolic.logging.JUnitTestGenerator $JUNIT_DIR $JUNIT_PKG $JUNIT_CNAME $JUNIT_FNAME $JUNIT_RUNCOUNT $JUNIT_LAST_DIR
+  jdb $JAVA_ARGS -classpath $CLASSPATH cute.concolic.logging.JUnitTestGenerator $JUNIT_DIR $JUNIT_PKG $JUNIT_CNAME $JUNIT_FNAME $JUNIT_RUNCOUNT $JUNIT_LAST_DIR
 done
 

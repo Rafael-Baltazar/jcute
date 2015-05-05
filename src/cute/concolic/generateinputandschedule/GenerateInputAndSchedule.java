@@ -394,7 +394,7 @@ public class GenerateInputAndSchedule {
                     predictQuick();
                     coverage.write();
                 }
-                if((information.debugLevel&256)!=0) logger.info(256,"Path Constriant",path);
+                if((information.debugLevel&256)!=0) logger.info(256,"Path Constraint",path);
                 if((information.debugLevel&64)!=0) logger.info(64,"New Branch History",history);
                 if((information.debugLevel&128)!=0) logger.info(128,"New Input",input);
             }

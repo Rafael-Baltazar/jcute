@@ -1,5 +1,5 @@
 #!/bin/bash
-NEWPATH=$PATH:/usr/lib/jvm/jdk1.7.0_65/bin
+NEWPATH=.:$PATH:/usr/lib/jvm/jdk1.7.0_65/bin
 export PATH=$NEWPATH
 echo "export PATH='$NEWPATH'" >> .bashrc
 sudo apt-get update -y

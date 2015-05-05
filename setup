@@ -33,15 +33,20 @@ echo `which bash` >> jcutec
 cat $LINUX_FLAG jcutec.in >> jcutec
 chmod +x jcutec
 
+echo -n "#!" > jcute
+echo `which bash` >> jcute
+cat $LINUX_FLAG jcute.in >> jcute
+chmod +x jcute
+
 echo -n "#!" > jdbcutec
 echo `which bash` >> jdbcutec
 cat $LINUX_FLAG jdbcutec.in >> jdbcutec
 chmod +x jdbcutec
 
-echo -n "#!" > jcute
-echo `which bash` >> jcute
-cat $LINUX_FLAG jcute.in >> jcute
-chmod +x jcute
+echo -n "#!" > jdbcute
+echo `which bash` >> jdbcute
+cat $LINUX_FLAG jdbcute.in >> jdbcute
+chmod +x jdbcute
 
 chmod +x jcutegui
 

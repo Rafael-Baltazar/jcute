@@ -3,6 +3,7 @@ package cute.concolic;
 import argparser.ArgParser;
 import argparser.BooleanHolder;
 import argparser.IntHolder;
+import argparser.StringHolder;
 import cute.Cute;
 import cute.concolic.concurrency.Scheduler;
 import cute.concolic.input.InputMap;
@@ -110,8 +111,8 @@ public class Globals {
         BooleanHolder generateJUnit = new BooleanHolder(true);
         parser.addOption("-j %v #generate JUnit test cases",generateJUnit);
         BooleanHolder printTraceAndInputs = new BooleanHolder(true);
-                parser.addOption("-v %v #verbose: print inputs and trace of execution",printTraceAndInputs);
-                IntHolder NArg = new IntHolder(0);
+        parser.addOption("-v %v #verbose: print inputs and trace of execution",printTraceAndInputs);
+        IntHolder NArg = new IntHolder(0);
         parser.addOption("-n %d #Pass a single integer argument ",NArg);
 
         String arg = System.getProperty("cute.args","");

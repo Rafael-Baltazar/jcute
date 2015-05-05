@@ -164,12 +164,11 @@ public class JUnitTestGenerator {
                 rf.seek(lastPos);
             }
             appendFile(rf,i,cName,fname,lastDir);
+            rf.writeBytes("}\n");
             rf.close();
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-        // append test input to test case
-
     }
 
     private static boolean isTestPresent(File f,String testFun){
@@ -218,14 +217,13 @@ private static void appendFile(RandomAccessFile rf, int i,String cName,String fn
             rf.writeBytes("        i=0;\n");
             rf.writeBytes("        cute.Cute.input = this;\n");
             if(fname.equals("main")){
-                rf.writeBytes("        "+cName+"."+fname+"(null);\n    }\n\n}\n");
+                rf.writeBytes("        "+cName+"."+fname+"(null);\n    }\n\n");
             } else {
-                rf.writeBytes("        "+cName+"."+fname+"();\n    }\n\n}\n");
+                rf.writeBytes("        "+cName+"."+fname+"();\n    }\n\n");
             }
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-
     }
 
     private static void createFile(File f, String pkg, String cName, String fname) {
@@ -249,4 +247,27 @@ private static void appendFile(RandomAccessFile rf, int i,String cName,String fn
         }
     }
 
+    /*
+    * Called after each concolic execution to generate a JUnit test case for that run.
+    */
+    public static void main(String[] args) {
+        if (args.length < 5) {
+            System.out.println("Use JUnitTestGenerator with arguments:\n"
+                    + " <destination_dir> <package> <class_under_test>"
+                    + " <function_under_test> <concolic_execution_run_id> <dir_with_junit_input>");
+            System.out.println("or with: --help");
+            if (args.length > 0 && args[0].equals("--help")) {
+                return;
+            } else {
+                System.exit(1);
+            }
+        }
+        final String dir = args[0];
+        final String pkg = args[1];
+        final String cName = args[2];
+        final String fname = args[3];
+        final int runCount = Integer.parseInt(args[4]);
+        final File lastDir = new File(args[5]);//Dir with junitInputFile.
+        JUnitTestGenerator.appendToJunitTestCase(dir,pkg,cName,fname,runCount,lastDir);
+    }
 }

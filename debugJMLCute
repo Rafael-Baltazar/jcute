@@ -1,0 +1,20 @@
+#!/bin/bash
+arch=$(uname)
+if [ $arch != "Linux" ]
+then
+    F_SPRT=\;
+    LIMT=\"
+else
+    F_SPRT=:
+    LIMT=
+fi
+CLASSPATH=$LIMT\tmpjcute$F_SPRT\jcute.jar$F_SPRT\others.jar$LIMT
+
+JCUTEC=./jcutec
+JCUTE=./jcute
+SRC=test/JMLCute/main
+dos2unix $JCUTEC
+dos2unix $JCUTE
+$JCUTEC $SRC/ $SRC/pt/ulisboa/tecnico/Main.java pt.ulisboa.tecnico.Main -sequential
+$JCUTE pt.ulisboa.tecnico.Main -i 10 -p 1 -j
+java -classpath jcute.jar cute.concolic.logging.BranchCoverageLog

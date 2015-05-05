@@ -118,7 +118,7 @@ Building
 Instead of downloading the binary distribution archive, the archive
 can also be built from the sources in this repository.
 If you have Vagrant installed, you can build jCUTE with just 'vagrant up'.
-Then, to check whether jCUTE was built correctly, run 'vagrant ssh; cd /vagrant; ./runtests'.
+Then, to check whether jCUTE was built correctly, run 'vagrant ssh; cd /vagrant; ./debugJMLCute'.
 
 ### Compiling the Constraint Solving Library on Linux
 
